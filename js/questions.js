@@ -113,7 +113,7 @@ function gradeAnswers() {
 }
 
 function submitQuestion() {
-   userAnswers.push($('#answers-container > * > [type="radio"]:checked').val())
+   userAnswers.push($('#answers-container > [type="radio"]:checked').val())
 
    questionIndex++;
    setupQuestion();
@@ -131,7 +131,8 @@ function setupQuestion() {
    $('#answers-container').empty();
 
    for (let i = 0; i < question.answers.length; i++) {
-      $('#answers-container').append('<label><input type="radio" name="answer" value="' + i + '">' + question.answers[i] + '</label><br>');
+      $('#answers-container').append('<input id="answer' + i + '" type="radio" name="answer" value="' + i + '">');
+      $('#answers-container').append('<label style="margin-left: 1rem; font-size: 20px;" for="answer' + i + '" class="lead">' + question.answers[i] + '</label><br>');
    }
 }
 

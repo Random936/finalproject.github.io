@@ -1,20 +1,67 @@
 <html>
 <head>
    <title>Questions</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+   <meta name="generator" content="Hugo 0.88.1">
+   <title>Kresge Final Project</title>
+
+   <!-- Bootstrap core CSS -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+     .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       user-select: none;
+     }
+
+     @media (min-width: 768px) {
+       .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+       }
+     }
+
+     .citation {
+        font-size: 10px;
+     }
+
+     .lead {
+        line-height: 1.5;
+        font-size: 18px;
+     }
+   </style>
+
+   <!-- Custom styles for this template -->
+   <link href="css/cover.css" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
-   <div id="questions-container">
-      <h3 id="question-text">This is the question</h3>
-      <div id="answers-container">
-         <!--
-         <label><input type="radio" name="answer" value="0"></label><br>
-         <label><input type="radio" name="answer" value="1"></label><br>
-         <label><input type="radio" name="answer" value="2"></label><br>
-         <label><input type="radio" name="answer" value="3"></label><br>
-         -->
+<body class="d-flex h-100 text-center text-white bg-dark" style="background-size: cover; background-repeat: no-repeat;" min-height: "100%">
+   <div style="max-width: 40em;" class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-5">
+        <div>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" href="test.html">Take the Test</a>
+            <a class="nav-link" href="testimonials.html">Testimonials</a>
+            <a class="nav-link" href="reflection.html">Conclusions</a>
+          </nav>
+        </div>
+      </header>
+
+      <div id="questions-container" style="text-align: left;">
+         <h3 id="question-text">This is the question</h3>
+         <div id="answers-container"></div>
+         <button class="btn text-center btn-lg btn-secondary fw-bold border-white bg-white mt-3" onclick="submitQuestion()">Next</button>
       </div>
-      <button onclick="submitQuestion()">Submit</button>
+
+      <footer style="font-size: 13px" class="mt-auto text-white-50">
+        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+      </footer>
    </div>
 
    <script src="js/questions.js"></script>
