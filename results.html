@@ -45,7 +45,7 @@
       <header class="mb-5">
         <div>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
             <a class="nav-link active" href="test.html">Take the Test</a>
             <a class="nav-link" href="testimonials.html">Testimonials</a>
             <a class="nav-link" href="reflection.html">Conclusions</a>
@@ -55,10 +55,10 @@
 
       <img class="mx-auto" width="300">
       <h3 id="caption" class="mt-5"></h3>
-      <!-- Maybe add some content here to explain more about immigration in a <p> element -->
+      <h3 id="grade"></h3>
 
       <footer style="font-size: 13px" class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+         <p>Questions sourced from <a class="text-white" href="https://www.uscis.gov/sites/default/files/document/crc/M_1778.pdf">USCIS</a><br>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
       </footer>
    </div>
    <script>
@@ -66,14 +66,18 @@
       const grade = params.get('grade');
 
       let img = document.querySelector('img');
-      let h3 = document.querySelector('h3');
+      let caption = document.getElementById('caption');
+      let percent = document.getElementById('grade');
+
       if (grade >= 0.60) {
          img.src = 'img/pass.png';
-         h3.innerText = "Congratulations you passed!";
+         caption.innerText = "Congratulations you passed!";
       } else {
          img.src = 'img/fail.png';
-         h3.innerText = "Sorry, you failed.";
+         caption.innerText = "Sorry, you failed.";
       }
+
+      percent.innerText = "Grade: " + (grade * 100).toFixed(1) + "%";
    </script>
 </body>
 </html>
