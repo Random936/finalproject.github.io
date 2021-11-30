@@ -4,7 +4,7 @@ let userAnswers = [];
 const questions = [
    {
       question: 'The words "Life, Liberty, and the pursuit of Happiness" are in what founding document?',
-      answers: ["Declaration of Independence", "Bill of Rights", "The constitution", "Federalist papers"],
+      answers: ["Declaration of Independence", "Bill of Rights", "The Constitution", "Federalist papers"],
       correct: 0
    },
    {
