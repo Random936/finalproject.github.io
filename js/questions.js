@@ -13,9 +13,14 @@ const questions = [
       correct: 0
    },
    {
-      question: "How long is a term for a U.S. senator?",
-      answers: ["4", "8", "6", "2"],
+      question: "How many voting members are in the House of Representatives?",
+      answers: ["420", "100", "435", "196"],
       correct: 2
+   },
+   {
+      question: "How many U.S. senators are there?",
+      answers: ["100", "150", "50", "169"],
+      correct: 0
    },
    {
       question: "How many senators does each state have?",
@@ -46,6 +51,11 @@ const questions = [
       question: "How many seats are on the Supreme Court?",
       answers: ["5", "15", "9", "7"],
       correct: 2
+   },
+   {
+      question: "Who vetoes bills?",
+      answers: ["The President", "Congress", "The Senate", "The Vice President"],
+      correct: 0
    },
    {
       question: "How many Supreme Court justices are usually needed to decide a case?",
